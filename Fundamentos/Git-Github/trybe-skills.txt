@@ -1,3 +1,5 @@
 Unix
 Bash
 Git
+Hard skills
+Easy skills
