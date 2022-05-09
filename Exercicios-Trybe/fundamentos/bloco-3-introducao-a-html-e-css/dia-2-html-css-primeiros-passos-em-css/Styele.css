@@ -1,0 +1,87 @@
+
+
+h1 {
+    background-color: rgb(176, 198, 239);
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(14, 49, 85);
+    padding: 15px 10px;
+    line-height: 20px;
+    font-size: 40px;
+    border-radius: 8%;
+    font-style:initial
+}
+
+img {
+    display: block;
+    margin: 0px auto;
+}
+
+a {
+    display: block;
+    margin: 0px auto;
+}
+
+body {
+    padding: 3%;
+    background-color:rgb(176, 198, 239)
+}
+
+.picture{
+    float: left;
+    border-radius: 20%;
+    background-color: rgb(15, 55, 89);
+    padding: 10px
+}
+
+.button{
+    text-align: center;
+    background-color: rgb(14, 49, 85);
+    color: aliceblue;
+    font-size: 16px ;
+    line-height: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.list-style {
+    text-align: center;
+    background-color: rgb(46, 66, 110)
+}
+
+p {
+    color: black;
+    font-size: 3em;
+    font-weight: 100;
+}
+
+
+.paragrafo {
+    text-align: center;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+
+}
+a {
+    text-align: center;
+    color: black;
+}
+
+.imagem-container { 
+    height: 365px;
+    position: relative;
+
+}
+.descrição{
+    position: absolute;
+    top: 320px;
+    right: 250px;
+    text-align: center;
+    font-style: oblique;
+    color: black
+}
+
+div { 
+    border: 5px solid green;
+}
