@@ -1,0 +1,41 @@
+ELEMENTOS SEMANTICOS --
+header : O elemento header representa um cabeçalho contendo texto introdutório
+nav : O elemento nav representa um conjunto de links de navegação
+aside : O elemento aside representa um conteúdo à parte.
+main : Representa o elemento (artigo) principal da sua pagina
+article : O elemento article representa um conteúdo autocontido. Ou seja, todo o conteúdo presente dentro de um article provê as informações necessárias para sua compreensão, podendo ser reusado em outras páginas.
+section : O elemento section representa uma seção do documento (apesar de ser semantica é a que MAIS PARECE COM A DIV) usada para fazer subseções na main
+footer : O elemento footer representa o rodapé do documento e/ou de uma seção
+
+
+
+HTML --
+div - Elemento generico em block
+span - elemeno generico em line (texto)
+ul - lista não ordenada <li>
+ol - lista ordenada <li>
+href - para reporesentar um link
+
+
+CSS --
+font famyly - font do site
+font-size - tamanho da fonte
+padding - criar um bloco em volta
+border - borda
+backgorun0color- cor de tars
+width - largura (px)
+height - altura (px)
+margin-top - margem de cima
+margin-botton - magem inferior
+margin-right - margem a direita
+margin-lft - margem a esquerda
+float - fazer um elemento flutuar
+
+display-inline - ttroca o displey para in line
+display-block - troca o displey prara block
+display- inline-block = faz com que vc mescle entre o line e o block, fazendo com que você consiga alterar tanhamos de lista por exemplo, sem alterar a fomatação do texto
+
+
+
+
+OBS: transformar um elemento block em float torna com que ele possa varar o bloco
