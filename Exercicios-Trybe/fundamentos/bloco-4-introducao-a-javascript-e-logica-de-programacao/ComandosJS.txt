@@ -1,0 +1,8 @@
+let = variavel
+const = variavel que não pode ser alterada
+
+switch (let)
+	case "":        = uliza varias consiçoes e para cada uma atribui uma resposta 
+	console.log()
+
+"array".push = para empurrar algo para dentro da lista
