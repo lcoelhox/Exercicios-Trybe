@@ -6,3 +6,74 @@ switch (let)
 	console.log()
 
 "array".push = para empurrar algo para dentro da lista
+
+let = variavel
+const = variavel que não pode ser alterada
+
+switch (let)
+	case "":        = uliza varias consiçoes e para cada uma atribui uma resposta 
+	console.log()
+
+
+
+ARRAYS - lista ------------------------------------------------------------------------------------------------------------------------
+"array".push = para empurrar algo para dentro da lista
+"array".length = mostra quantos elementos tem dentro do array
+"array".sort = lista o array em ordem alfabetica
+"array"[0] = mostra o primeiro elemento e assim por diante
+
+
+
+FOR - laço de repetição ------------------------------------------------------------------------------------------------------------
+(ARRAY)
+    ( CONTDOR     =                  CONTADOR + 1                          = CONTADOR ++)
+for (let index = 0; index < "array".length; index +=1){
+	console.log("array"[index]);   
+}  = nesse caso vai repetir a lista até o final 
+  
+  
+(NUMEROS)
+    ( CONTDOR     =                  CONTADOR + 1                          = CONTADOR ++) 	
+for (let contador = 1; contador <= 9; contador += 1){
+	console.log(numero * contador);
+} = nesse caso ele faria a tabuada do numero.
+
+
+
+FOR/OF - laço de repetição --------------------------------------------------------------------------------------------------------
+
+(ARRAY) ----
+let numeros = [1,2,3,4,5];
+
+for(let numero of numeros) {
+  console.log(numero);
+}
+
+// resultado:
+//1
+//2
+//3
+//4
+//5
+
+(STRING) ----
+let word = 'Hello';
+for (let letter of word) {
+  console.log(letter);
+}
+// resultado:
+// "H"
+// "e"
+// "l"
+// "l"
+// "o"
+
+(NUMEROS) ----
+let arrOfNumbers = [10, 20, 30];
+for (let sum of arrOfNumbers) {
+  sum += 1;
+  console.log(sum);
+}
+// 11
+// 21
+// 31
