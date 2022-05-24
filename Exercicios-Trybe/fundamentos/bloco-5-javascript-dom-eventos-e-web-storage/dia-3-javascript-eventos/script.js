@@ -1,3 +1,4 @@
+
 function createDaysOfTheWeek() {
     const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
     const weekDaysList = document.querySelector('.week-days');
@@ -13,19 +14,21 @@ function createDaysOfTheWeek() {
 createDaysOfTheWeek();
 
 
-let days = document.querySelector('.days');
-let li = document.createElement('li')
-let daysContainer = document.querySelector('#days-container')
-li.className = 'day'
-createElement = li;
-daysContainer.appendChild(li);
+let days = document.querySelector('#days');
+//let daysContainer = document.querySelector('#days-container')
+
 const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 function createDaysN() {
     for (let index = 0; index < dezDaysList.length; index += 1) {
-        let li = dezDaysList[index];
-        //days.appendChild(daysM);
-        li.className = 'day';
-        //li[24, 25, 31].className = 'day holiday';
+        let dezDays = dezDaysList[index];
+        let dezDaysItem = document.createElement('li')
+        dezDaysItem.className = 'day';
+        if (dezDays === 24 || dezDays === 25 || dezDays === 31){
+            dezDaysItem.className = 'day ' + 'holiday';
+        }
+        dezDaysItem.innerHTML = dezDays;
+        days.appendChild(dezDaysItem);
+       
     }
 }
 createDaysN();
