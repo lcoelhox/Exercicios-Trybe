@@ -36,10 +36,15 @@ function createDaysN() {
     }
 }
 createDaysN();
-
-//function feriados(feriados);
-//let button = document.querySelector('.buttons-container');
-//if (dezDaysList === 24 || dezDaysList === 25 || dezDaysList === 31) {
-//    let criarB = document.createElement(button)
-//}
-//button.appendChild(criarB);
+function feriados() {
+    let containerButton = document.querySelector('.buttons-container');
+    let dezDays = document.querySelector('#days')
+    let button = document.createElement('button');
+    containerButton.appendChild(button);
+    button.idName = 'btn-holiday'
+    let clickP = clickP.addEventListener("click", recebeclick);
+    if (recebeclick === button){
+        dezDays[26].innerHTML = 'feriado'
+    }
+}
+feriados()

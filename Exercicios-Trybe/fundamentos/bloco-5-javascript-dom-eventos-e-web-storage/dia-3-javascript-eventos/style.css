@@ -10,6 +10,9 @@
   
   button {
     margin: 20px;
+    width: 100px;
+    height: 30px;
+    border-radius: 20%;
   }
   
   #btn-add {
@@ -17,7 +20,7 @@
   }
   
   .buttons-container {
-    background-color: #eee;
+    background-color: rgb(48, 159, 26);
     display: inline-block;
     text-align: center;
     width: 100%;
