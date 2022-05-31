@@ -1,0 +1,13 @@
+* {
+    text-align: center;
+}
+
+#formulario {
+    background-color: rgb(225, 236, 248);
+    border: 1px solid rgb(136, 149, 164);
+    border-radius: 4px;
+    width: 80%;
+    padding: 50px;
+    margin: 40px auto;
+    text-align: center;
+}

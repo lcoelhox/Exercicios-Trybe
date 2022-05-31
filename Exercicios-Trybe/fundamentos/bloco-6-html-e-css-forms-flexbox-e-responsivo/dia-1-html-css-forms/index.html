@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Formulario de viagem</h1>
+        <form action="" id="formulario">
+            <div id="name-container">
+                <label for="nome"></label> Insira seu nome:
+                <input type="text" id="nome" name="nome" required maxlength="40" minlength="10"
+                    placeholder="Nome completo">
+            </div>
+            <br>
+            <div id="email-container">
+                <label for="email"></label> Insira seu e-mail:
+                <input type="email" id="email" nome="email" required maxlength="50" minlength="10" placeholder="E-mail">
+            </div>
+            <br>
+            <div id="destino-container">
+                <fieldset id="">
+                    <legend>Destino preferido:</legend>
+                    <input type="radio" id="cidade" value="cidade" name="destino">
+                    <label for="cidade"></label> Cidade
+
+                    <input type="radio" id="campo" value="campo" name="destino">
+                    <label for="campo"></label> Campo
+
+                    <input type="radio" id="praia" value="praia" name="destino">
+                    <label for="praia"></label> Praia
+
+                    <input type="radio" id="montanhas" value="montanhas" name="destino">
+                    <label for="montanhas"></label> Montanhas
+                </fieldset>
+            </div>
+            <br>
+            <div id="texto-container">
+                <label for="texto"></label>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+                TrybeTrip?
+                <br>
+                <legend>Max: 500 caracteres</legend>
+                <textarea name="textoConcorrente" id="texto" maxlength="500" cols="30" rows="10"></textarea>
+            </div>
+            <br>
+            <div id="checkBox-container">
+                <input type="checkbox"> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+                <br>
+                <input required type="checkbox"> Concordo que imagens das minhas férias poderão ser usadas na divulgação
+                de concursos futuros.
+            </div>
+            <br>
+            <div id="button-container">
+                <button id="buttonEnviar" type="submit">Enviar</button>
+                <button id="buttonApagar" type="reset">Apagar</button>
+            </div>
+        </form>
+    </header>
+    <script src="script.js"></script>
+</body>
+
+</html>
