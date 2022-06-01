@@ -6,62 +6,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.2.0-beta1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
+    <header id="cabecalho">
         <h1>Formulario de viagem</h1>
-        <form action="" id="formulario">
-            <div id="name-container">
-                <label for="nome"></label> Insira seu nome:
-                <input type="text" id="nome" name="nome" required maxlength="40" minlength="10"
-                    placeholder="Nome completo">
-            </div>
-            <br>
-            <div id="email-container">
-                <label for="email"></label> Insira seu e-mail:
-                <input type="email" id="email" nome="email" required maxlength="50" minlength="10" placeholder="E-mail">
-            </div>
-            <br>
-            <div id="destino-container">
-                <fieldset id="">
-                    <legend>Destino preferido:</legend>
-                    <input type="radio" id="cidade" value="cidade" name="destino">
-                    <label for="cidade"></label> Cidade
-
-                    <input type="radio" id="campo" value="campo" name="destino">
-                    <label for="campo"></label> Campo
-
-                    <input type="radio" id="praia" value="praia" name="destino">
-                    <label for="praia"></label> Praia
-
-                    <input type="radio" id="montanhas" value="montanhas" name="destino">
-                    <label for="montanhas"></label> Montanhas
-                </fieldset>
-            </div>
-            <br>
-            <div id="texto-container">
-                <label for="texto"></label>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
-                TrybeTrip?
-                <br>
-                <legend>Max: 500 caracteres</legend>
-                <textarea name="textoConcorrente" id="texto" maxlength="500" cols="30" rows="10"></textarea>
-            </div>
-            <br>
-            <div id="checkBox-container">
-                <input type="checkbox"> Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
-                <br>
-                <input required type="checkbox"> Concordo que imagens das minhas férias poderão ser usadas na divulgação
-                de concursos futuros.
-            </div>
-            <br>
-            <div id="button-container">
-                <button id="buttonEnviar" type="submit">Enviar</button>
-                <button id="buttonApagar" type="reset">Apagar</button>
-            </div>
-        </form>
     </header>
+    <form action="" id="formulario">
+        <div class="form-group mb-3" id="name-container">
+            <label class="form-label" for="nome"></label> Insira seu nome:
+            <input class="form-control" type="text" id="nome" name="nome" required maxlength="40" minlength="10"
+                placeholder="Nome completo">
+        </div>
+        <br>
+        <div class="form-group mb-3" id="email-container">
+            <label class="form-label" for="email"></label> Insira seu e-mail:
+            <input class="form-control" type="email" id="email" nome="email" required maxlength="50" minlength="10"
+                placeholder="E-mail">
+        </div>
+        <br>
+        <div class="container-lg" id="destino-container">
+            <fieldset id="fieldsetCheck">
+                <legend>Destino preferido:</legend>
+                <input class="form-check-input" type="radio" id="cidade" value="cidade" name="destino">
+                <label class="form-check-label" for="cidade"></label> Cidade
+                <br>
+                <input class="form-check-input" type="radio" id="campo" value="campo" name="destino">
+                <label class="form-check-label" for="campo"></label> Campo
+                <br>
+                <input class="form-check-input" type="radio" id="praia" value="praia" name="destino">
+                <label class="form-check-label" for="praia"></label> Praia
+                <br>
+                <input class="form-check-input" type="radio" id="montanhas" value="montanhas" name="destino">
+                <label class="form-check-label" for="montanhas"></label> Montanhas
+            </fieldset>
+        </div>
+        <br>
+        <div class="form-floating" id="texto-container">
+            <label id="labelText" for="texto"></label><strong>Por que você deveria ser a pessoa desenvolvedora a ganhar
+                o concurso
+                TrybeTrip?</strong>
+            <br>
+            <legend id="legenda"><em>Max: 500 caracteres</em></legend>
+            <textarea class="form-control" name="textoConcorrente" id="texto" maxlength="500" cols="25"
+                rows="5"></textarea>
+        </div>
+        <br>
+        <div class="form-group" id="checkBox-container">
+            <input type="checkbox"> <strong>Gostaria de receber outras incríveis oportunidades oferecidas pela
+                Trybe?</strong>
+            <br>
+            <input required type="checkbox"> <strong>Concordo que imagens das minhas férias poderão ser usadas na
+                divulgação
+                de concursos futuros.</strong>
+        </div>
+        <br>
+        <div id="button-container">
+            <button id="buttonEnviar" class="btn btn-success" type="submit">Enviar</button>
+            <button id="buttonApagar" class="btn btn-warning" type="reset">Apagar</button>
+        </div>
+    </form>
+    <footer class="card-footer text-muted" id="rodape">
+        <em><strong>Boa sorte Tryber!</strong></em> 
+    </footer>
     <script src="script.js"></script>
 </body>
 
