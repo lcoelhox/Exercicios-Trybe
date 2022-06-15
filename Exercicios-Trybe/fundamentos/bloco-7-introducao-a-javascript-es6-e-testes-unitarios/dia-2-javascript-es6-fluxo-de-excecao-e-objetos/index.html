@@ -15,36 +15,28 @@
     <button id="button">Somar</button>
     <p id="result"></p>
     <script>
-      
       function sum() {
-        const value1 = document.getElementById('value1').value;
-        const value2 = document.getElementById('value2').value;
-        const result = parseInt(value1) + parseInt(value2);
-        document.getElementById('result').innerHTML = `Resultado: ${result}`;
-        document.getElementById('value1').value = '';
-        document.getElementById('value2').value = '';
-        // if (value1.innerHTML === '' || value2.innerHTML === ''){
-        }
         try {
-            if (false){
-                throw new Error('error1')
-            }
-            if (true) {
-                throw new Error('error2')
-            }
+          const value1 = document.getElementById("value1").value;
+          const value2 = document.getElementById("value2").value;
+          const result = parseInt(value1) + parseInt(value2);
+          document.getElementById("result").innerHTML = `Resultado: ${result}`;
+          document.getElementById("value1").value = "";
+          document.getElementById("value2").value = "";
+          if (value1 === "" || value2 === "") {
+            throw new Error("Digite os dois parametros");
+          }
+          if ( isNaN(value1) || isNaN(value2) ) {
+            throw new Error('Digite apenas NUMEROS')
+          }
+        } catch(error) {
+          result.innerHTML = `${error.message}`;
         }
-        catch (error) {
-            if (error.message == 'error1'){
-                console.log('tratar problema 1')
-            }
-            if (error.message == 'error2'){
-                console.log('tratar erro 2')
-            }
-        }
-      window.onload = () => {
-        const button = document.getElementById('button');
-        button.addEventListener('click', sum);
       }
+      window.onload = () => {
+        const button = document.getElementById("button");
+        button.addEventListener("click", sum);
+      };
     </script>
   </body>
 </html>
