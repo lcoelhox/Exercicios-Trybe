@@ -65,17 +65,23 @@ const books = [
   function authorBornIn1947(year) {
     
   }
-  const result1 = books.find((pessoa) => pessoa.author.birthYear === 1947).author.name;
-  console.log(result1);
+  const result = books.find((pessoa) => pessoa.author.birthYear === 1947).author.name;
+  console.log(result);
 
-  function smallerName() {
+  function smallerName(menorLivro) {
     let nameBook;
-    books.forEach((bookSmal) => bookSmal.length < bookSmal).name
-        nameBook = bookSmal
-  
+    if (menorLivro.name.length > nameBook) {
+      menorLivro = nameBook
+    }
+    console.log(nameBook)
     // Variável nameBook que receberá o valor do menor nome;
     return nameBook;
   }
+  books.forEach(smallerName);
+  // console.log(nameBook)
+  // const nameBook = books.forEach((menorLivro) => menorLivro.length < menorLivro.length)
+  // console.log(nameBook)
 
-  const nameBook = books.find((menorLivro) => menorLivro.length < menorLivro.length).name
-  console.log(nameBook)
+  // const showEmailList = (email) => {
+  //   console.log(`O email ${email} esta cadastrado em nosso banco de dados!`);
+  // };
