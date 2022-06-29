@@ -68,20 +68,3 @@ const books = [
   const result = books.find((pessoa) => pessoa.author.birthYear === 1947).author.name;
   console.log(result);
 
-  function smallerName(menorLivro) {
-    let nameBook;
-    if (menorLivro.name.length > nameBook) {
-      menorLivro = nameBook
-    }
-    console.log(nameBook)
-    // Variável nameBook que receberá o valor do menor nome;
-    return nameBook;
-  }
-  books.forEach(smallerName);
-  // console.log(nameBook)
-  // const nameBook = books.forEach((menorLivro) => menorLivro.length < menorLivro.length)
-  // console.log(nameBook)
-
-  // const showEmailList = (email) => {
-  //   console.log(`O email ${email} esta cadastrado em nosso banco de dados!`);
-  // };
