@@ -60,40 +60,18 @@ const books = [
       releaseYear: 1928,
     },
 ];
+
+const expectedResult = [
+    'Frank Herbert',
+    'George R. R. Martin',
+    'Isaac Asimov',
+    'J. R. R. Tolkien',
+  ];
   
-  // Adicione o código do exercício aqui:
-//   const expectedResult = [
-//     'As Crônicas de Gelo e Fogo - Fantasia - George R. R. Martin',
-//     'O Senhor dos Anéis - Fantasia - J. R. R. Tolkien',
-//     'Fundação - Ficção Científica - Isaac Asimov',
-//     'Duna - Ficção Científica - Frank Herbert',
-//     'A Coisa - Terror - Stephen King',
-//     'O Chamado de Cthulhu - Terror - H. P. Lovecraft',
-//   ];
-  
-// function formatedBookNames() 
-
-// EXERCICIO 1
-const livros = books.map ((livro) => {
-    return `${livro.name} - ${livro.genre} - ${livro.author.name}`
-})
-
-console.log(livros)
-
-// EXERCICIO 2
-function nameAndAge() {
-    return books.map((autorLivro) => {
-    const idade = autorLivro.releaseYear - autorLivro.author.birthYear;
-    return {author: `${autorLivro.author.name}`, age:idade};
-    }).sort((a, b) => a.age - b.age);    
-};
-
-console.log(nameAndAge(books));
-
-// EXERCICIO 3
-function fantasyOrScienceFiction() {
-    return books.filter((genero) => {
-        return genero.genre === 'Ficção Científica' || genero.genre === 'Fantasia';
-        })
-  };
-console.log(fantasyOrScienceFiction(books));
+function fantasyOrScienceFictionAuthors() {
+    const wantedGenres = ['Fantasia', 'Ficção Científica'];
+    return books
+        .filter((book) => wantedGenres.includes(book.genre))
+        .map((book) => book.author.name).sort();
+    }
+console.log(fantasyOrScienceFictionAuthors(books))
