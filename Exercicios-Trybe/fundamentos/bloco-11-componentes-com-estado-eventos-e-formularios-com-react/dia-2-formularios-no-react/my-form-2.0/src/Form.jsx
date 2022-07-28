@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import Button from './Button'
 
 export default class Form extends Component {
+  constructor() {
+    super()
 
-    state = {
+    this.state = {
       name: '',
       email: '',
       cpf: '',
@@ -11,12 +13,17 @@ export default class Form extends Component {
       cidade: '',
       estado: '',
     }
+  }
 
-    handleChange = (event) => {
-        this.setState({ [event.target.name]: event.target.value  }, () => {
-          const { name, email, cpf, endereço, cidade, estado } = this.state
+
+    handleChange = ({ target }) => {
+        const { name } = target
+        const value = target.type === 'checkbox' ? target.checked : target.value
+        
+        this.setState({
+          [name]: value
         })
-    }
+      }
 
   render() {
     return (
@@ -24,22 +31,22 @@ export default class Form extends Component {
         <h2>Campo de preenchimento</h2>
         <fieldset>
             <label htmlFor=""> Nome:
-            <input type="text" name='name' required /> <hr />
+            <input type="text" name='name' value={this.state.name} onChange={this.handleChange} required /> <hr />
             </label>
             <label> Email:
-            <input type="email" name='email' required /> <hr />
+            <input type="email" name='email' value={this.state.email} onChange={this.handleChange} required /> <hr />
             </label>
             <label> CPF:
-            <input type="text" name='cpf' required /> <hr />
+            <input type="text" name='cpf' value={this.state.cpf} onChange={this.handleChange} required /> <hr />
             </label>
             <label> Endereço:
-            <input type="text" name='endereço' required /> <hr />
+            <input type="text" name='endereço' value={this.state.endereço} onChange={this.handleChange} required /> <hr />
             </label>
             <label> Cidade:
-            <input type="text" name='cidade' required /> <hr />
+            <input type="text" name='cidade' value={this.state.cidade} onChange={this.handleChange} required /> <hr />
             </label>
             <label> Estado:
-            <input type="text" name='estado' required /> <hr />
+            <input type="text" name='estado' value={this.state.estado} onChange={this.handleChange} required /> <hr />
             </label>
             <label htmlFor=""> Você mora em apartamento ou casa?
             <input type="radio" name='casa'/>casa
